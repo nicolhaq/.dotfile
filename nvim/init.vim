@@ -1,11 +1,20 @@
+"auto install vimplug
+
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 "define plugins to load
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
-Plug 'kaicataldo/material.vim'
+Plug 'junegunn/vim-easy-align'
 Plug 'luochen1990/rainbow'
 Plug 'itchyny/lightline.vim'
-"Plug 'liuchengxu/eleline.vim'
+Plug 'chriskempson/base16-vim'
+Plug 'mike-hearn/base16-vim-lightline'
 
 call plug#end()
 
@@ -16,14 +25,14 @@ if (has("termguicolors"))
 endif
 
 set background=dark
-colorscheme material
+colorscheme base16-material-darker
 let g:rainbow_active = 1
 function! CocCurrentFunction()
     return get(b:, 'coc_current_function', '')
 endfunction
 
 let g:lightline = {
-	\'colorscheme': 'material',
+	\'colorscheme': 'base16-material-darker',
 	\'active': {
 	\  'left': [ [ 'mode', 'paste' ],
 	\     [  'git', 'diagnostic','cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ]
@@ -48,18 +57,18 @@ set ignorecase
 set smartcase 
 
 " some formatting options
-set showmatch			" Show matching brackets.
-set number			" Show the line numbers on the left side.
-set formatoptions+=o		" Continue comment marker in new lines.
-set tabstop=8			" Render TABs using this many spaces.
-set shiftwidth=8		" Indentation amount for < and > commands
-set clipboard=unnamedplus	" use system clipboard.
+set showmatch                      " Show matching brackets.
+set number                         " Show the line numbers on the left side.
+set formatoptions+=o           " Continue comment marker in new lines.
+set tabstop=8           " Render TABs using this many spaces.
+set shiftwidth=8           " Indentation amount for < and > commands
+set clipboard=unnamedplus " use system clipboard.
 set listchars=tab:\|\ ,trail:·
 set list
-hi MatchParen guifg=NONE guibg=NONE gui=underline cterm=underline
+hi MatchParen guifg=NONE guibg = NONE gui = underline cterm = underline
 set colorcolumn=80
-set cursorline        " highlight current line
-set cursorcolumn      " highlight current column
+set cursorline                     " highlight current line
+set cursorcolumn                   " highlight current column
 
 
 "Dynamic line number
@@ -191,3 +200,9 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+"easy align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
