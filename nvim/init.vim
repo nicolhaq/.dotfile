@@ -32,7 +32,7 @@ function! CocCurrentFunction()
 endfunction
 
 let g:lightline = {
-	\'colorscheme': 'base16-material-darker',
+	\'colorscheme': 'base16_material_darker',
 	\'active': {
 	\  'left': [ [ 'mode', 'paste' ],
 	\     [  'git', 'diagnostic','cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ]
@@ -200,9 +200,9 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
 "easy align
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
-
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
