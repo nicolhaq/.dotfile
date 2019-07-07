@@ -1,0 +1,12 @@
+{
+  "marketplace": {
+    "%2Fhome%2Fnhaquet": [
+      "git"
+    ]
+  },
+  "files": {
+    "%2Fhome%2Fnhaquet": [
+      "test"
+    ]
+  }
+}

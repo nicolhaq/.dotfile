@@ -1,0 +1,84 @@
+[
+  {
+    "id": "19ac0080-9f7a-11e9-9109-179ac931163e",
+    "content": [
+      "for_window [title=\"Library\" class=\"Firefox\"] floating enable"
+    ],
+    "regtype": "V",
+    "path": "file:///home/nhaquet/.dotfile/i3/config\t223\t1",
+    "filetype": "conf"
+  },
+  {
+    "id": "95746a40-9f52-11e9-89f3-2332e00fc129",
+    "content": [
+      "82AAFF"
+    ],
+    "regtype": "v",
+    "path": "file:///home/nhaquet/.dotfile/i3/config\t334\t14",
+    "filetype": "conf"
+  },
+  {
+    "id": "77f01c30-9f52-11e9-89f3-2332e00fc129",
+    "content": [
+      "4A4A4A"
+    ],
+    "regtype": "v",
+    "path": "file:///home/nhaquet/.dotfile/i3/config\t324\t14",
+    "filetype": "conf"
+  },
+  {
+    "id": "454e3a00-9f52-11e9-89f3-2332e00fc129",
+    "content": [
+      "#EEFFFF"
+    ],
+    "regtype": "v",
+    "path": "file:///home/nhaquet/.dotfile/i3/config\t326\t13",
+    "filetype": "conf"
+  },
+  {
+    "id": "c95b6180-9f50-11e9-b416-d7b9298f0420",
+    "content": [
+      "conky -c /usr/share/conky/conky_shortcuts_live_maia &&"
+    ],
+    "regtype": "V",
+    "path": "file:///usr/bin/start_conky_live_maia\t3\t1",
+    "filetype": "sh"
+  },
+  {
+    "id": "fa19e2b0-9f19-11e9-b295-21618ca12e81",
+    "content": [
+      "4 6 1 8 8 6"
+    ],
+    "regtype": "v",
+    "path": "file:///home/nhaquet/.config/neofetch/config.conf\t670\t17",
+    "filetype": "conf"
+  },
+  {
+    "id": "f4203120-9f19-11e9-b295-21618ca12e81",
+    "content": [
+      "(4"
+    ],
+    "regtype": "v",
+    "path": "file:///home/nhaquet/.config/neofetch/config.conf\t670\t16",
+    "filetype": "conf"
+  },
+  {
+    "id": "921c4d60-9e88-11e9-a7ee-39b0951e47b6",
+    "content": [
+      "glx-swap-method = \"undefined\";",
+      ""
+    ],
+    "regtype": "v",
+    "path": "file:///home/nhaquet/.config/compton.conf\t59\t1",
+    "filetype": "conf"
+  },
+  {
+    "id": "69a25d20-9e88-11e9-a7ee-39b0951e47b6",
+    "content": [
+      "glx-swap-method = \"undefined\";"
+    ],
+    "regtype": "V",
+    "path": "file:///home/nhaquet/.config/compton.conf\t59\t1",
+    "filetype": "conf"
+  }
+]
