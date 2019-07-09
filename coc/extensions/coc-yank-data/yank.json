@@ -1,5 +1,107 @@
 [
   {
+    "id": "a9628200-a266-11e9-9757-03acf4ddc004",
+    "content": [
+      "source ~/.dotfile/nvim/coc_mapping.vim"
+    ],
+    "regtype": "V",
+    "path": "file:///Users/nhaquet/.dotfile/nvim/init.vim\t8\t1",
+    "filetype": "vim"
+  },
+  {
+    "id": "e2457470-a265-11e9-9757-03acf4ddc004",
+    "content": [
+      "source ~/.dotfile/nvim/lightline.vim"
+    ],
+    "regtype": "V",
+    "path": "file:///Users/nhaquet/.dotfile/nvim/init.vim\t6\t1",
+    "filetype": "vim"
+  },
+  {
+    "id": "1f576a90-a265-11e9-9757-03acf4ddc004",
+    "content": [
+      "source ~/.dotfile/nvim/config.vim"
+    ],
+    "regtype": "V",
+    "path": "file:///Users/nhaquet/.dotfile/nvim/init.vim\t4\t1",
+    "filetype": "vim"
+  },
+  {
+    "id": "a723ac00-a25a-11e9-9eed-b9796d3ea23a",
+    "content": [
+      "source ~/.dotfile/nvim/plugins.vim"
+    ],
+    "regtype": "V",
+    "path": "file:///Users/nhaquet/.dotfile/nvim/init.vim\t2\t1",
+    "filetype": "vim"
+  },
+  {
+    "id": "9528d120-a259-11e9-9eed-b9796d3ea23a",
+    "content": [
+      "function! CocCurrentFunction()",
+      "    return get(b:, 'coc_current_function', '')",
+      "endfunction"
+    ],
+    "regtype": "V",
+    "path": "file:///Users/nhaquet/.dotfile/nvim/init.vim\t69\t1",
+    "filetype": "vim"
+  },
+  {
+    "id": "03089870-a227-11e9-9b46-15d9d9d51451",
+    "content": [
+      "CursorHold "
+    ],
+    "regtype": "v",
+    "path": "file:///Users/nhaquet/.dotfile/nvim/init.vim\t151\t9",
+    "filetype": "vim"
+  },
+  {
+    "id": "00bd6ff0-a227-11e9-9b46-15d9d9d51451",
+    "content": [
+      "CursorHold * "
+    ],
+    "regtype": "v",
+    "path": "file:///Users/nhaquet/.dotfile/nvim/init.vim\t151\t9",
+    "filetype": "vim"
+  },
+  {
+    "id": "fbde0800-a226-11e9-9b46-15d9d9d51451",
+    "content": [
+      "Hold "
+    ],
+    "regtype": "v",
+    "path": "file:///Users/nhaquet/.dotfile/nvim/init.vim\t151\t15",
+    "filetype": "vim"
+  },
+  {
+    "id": "f82cbfd0-a226-11e9-9b46-15d9d9d51451",
+    "content": [
+      "\" Highlight symbol under cursor on CursorHold",
+      "autocmd CursorHold * silent call CocActionAsync('highlight')"
+    ],
+    "regtype": "V",
+    "path": "file:///Users/nhaquet/.dotfile/nvim/init.vim\t150\t1",
+    "filetype": "vim"
+  },
+  {
+    "id": "040400c0-a169-11e9-934a-6fca420e3de3",
+    "content": [
+      "Fn(&char) -> bool"
+    ],
+    "regtype": "v",
+    "path": "file:///Users/nhaquet/Exercism/rust/atbash-cipher/src/lib.rs\t10\t14",
+    "filetype": "rust"
+  },
+  {
+    "id": "8bc36560-a168-11e9-934a-6fca420e3de3",
+    "content": [
+      "-> impl Iterator<Item = char> + '_ "
+    ],
+    "regtype": "v",
+    "path": "file:///Users/nhaquet/Exercism/rust/atbash-cipher/src/lib.rs\t9\t45",
+    "filetype": "rust"
+  },
+  {
     "id": "19ac0080-9f7a-11e9-9109-179ac931163e",
     "content": [
       "for_window [title=\"Library\" class=\"Firefox\"] floating enable"

@@ -2,11 +2,28 @@
   "marketplace": {
     "%2Fhome%2Fnhaquet": [
       "git"
+    ],
+    "%2FUsers%2Fnhaquet": [
+      "hi"
     ]
   },
   "files": {
     "%2Fhome%2Fnhaquet": [
       "test"
+    ],
+    "%2FUsers%2Fnhaquet%2FExercism%2Frust%2Fatbash-cipher": [
+      "at",
+      "libs",
+      "li",
+      "lib"
+    ],
+    "%2FUsers%2Fnhaquet": [
+      "%:h/"
+    ]
+  },
+  "diagnostics": {
+    "%2FUsers%2Fnhaquet": [
+      "ap"
     ]
   }
 }
