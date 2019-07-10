@@ -17,3 +17,9 @@ Plug 'chriskempson/base16-vim'
 Plug 'mike-hearn/base16-vim-lightline'
 
 call plug#end()
+
+call coc#add_extension(
+	\'coc-rls', 'coc-pairs',
+	\'coc-yank', 'coc-highlight',
+	\'coc-git', 'coc-lists',
+	\'coc-marketplace')
