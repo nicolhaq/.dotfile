@@ -10,6 +10,7 @@ endif
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+Plug 'airblade/vim-rooter'
 Plug 'junegunn/vim-easy-align'
 Plug 'luochen1990/rainbow'
 Plug 'itchyny/lightline.vim'
