@@ -24,4 +24,5 @@ call coc#add_extension(
 	\'coc-rls', 'coc-pairs',
 	\'coc-yank', 'coc-highlight',
 	\'coc-git', 'coc-lists',
-	\'coc-marketplace')
+	\'coc-marketplace', 'coc-ccls',
+	\'coc-vimlsp')
