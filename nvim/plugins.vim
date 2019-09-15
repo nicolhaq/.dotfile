@@ -17,6 +17,7 @@ Plug 'luochen1990/rainbow'
 Plug 'itchyny/lightline.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'mike-hearn/base16-vim-lightline'
+Plug 'TaDaa/vimade'
 
 call plug#end()
 
