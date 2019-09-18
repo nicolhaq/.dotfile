@@ -71,7 +71,6 @@ set background=dark
 colorscheme base16-material-darker
 let g:rainbow_active = 1
 
-
 hi ActiveWindow ctermbg=None ctermfg=None
 hi InactiveWindow ctermbg=darkgray ctermfg=gray guibg=#282c34
 set winhighlight=Normal:ActiveWindow,NormalNC:InactiveWindow
