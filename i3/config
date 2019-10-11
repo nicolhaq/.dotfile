@@ -58,7 +58,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec firefox
 #bindsym $mod+F3 exec pcmanfm
-bindsym $mod+F3 exec ranger
+bindsym $mod+F3 exec terminal -e ranger
 bindsym $mod+Shift+F3 exec gksu pcmanfm
 bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
@@ -144,18 +144,24 @@ bindsym $mod+Ctrl+Left workspace prev
 set $ws1 1:1:>_
 set $ws2 2
 set $ws3 3:3:
-set $ws4 4
+set $ws4 4:4:disc
 set $ws5 5
 set $ws6 6
-set $ws7 7
-set $ws8 8
+set $ws7 7:7:game
+set $ws8 8:8:steam
 
 
 ##==================================================##
 #                         *** Workspace specific settings ***                     #
 ##=================================================##
 # Assign Workspaces:
-assign [class="Firefox"] $ws3
+assign [class="firefox"] $ws3
+assign [class="discord"] $ws4
+assign [class="Terraria"] $ws7
+assign [class="Minecraft"] $ws7
+assign [class="dontstarve_steam"] $ws7
+assign [class="factorio"] $ws7
+assign [class="Steam"] $ws8
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -288,7 +294,7 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id conky -c /home/nhaquet/.config/i3/conky
+exec --no-startup-id conky -c ~/.config/i3/conky
 
 #exec --no-startup-id bash ~/.i3/display.bash
 # exec --no-startup-id start_conky_green
@@ -296,6 +302,7 @@ exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
+exec --no-startup-id ~/.config/i3/i3-alternating-layout/alternating_layouts.py
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
 # https://i3wm.org/docs/userguide.html#xresources
