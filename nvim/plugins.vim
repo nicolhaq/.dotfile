@@ -17,6 +17,8 @@ Plug 'luochen1990/rainbow'
 Plug 'itchyny/lightline.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'mike-hearn/base16-vim-lightline'
+Plug 'scrooloose/nerdcommenter'
+Plug 'TaDaa/vimade'
 
 call plug#end()
 
@@ -31,3 +33,5 @@ call coc#add_extension(
 	\'coc-git', 'coc-lists',
 	\'coc-marketplace', 'coc-ccls',
 	\'coc-vimlsp')
+
+let g:vimade = {'enablefocusfading': 1}

@@ -19,11 +19,11 @@ set shiftwidth=8           " Indentation amount for < and > commands
 set clipboard=unnamedplus " use system clipboard.
 set listchars=tab:\|\ ,trail:·
 set list
-
+let mapleader = " "
 "match brackets
 hi MatchParen    cterm=reverse ctermfg=NONE ctermbg=NONE
 set colorcolumn=80
-set cursorline                    " highlight current line
+"set cursorline                    " highlight current line
 
 "make vim go a bit faster
 set synmaxcol=128
@@ -32,11 +32,17 @@ set lazyredraw
 set re=1
 
 "Dynamic line number
-set number relativenumber
+"set number relativenumber
 augroup numbertoggle
 	autocmd!
 	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
 	autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+augroup lineHighlight
+    autocmd!
+    autocmd WinEnter,FocusGained * set cul
+    autocmd WinLeave,FocusLost * set nocul
 augroup END
 
 "split default
@@ -71,6 +77,3 @@ set background=dark
 colorscheme base16-material-darker
 let g:rainbow_active = 1
 
-hi ActiveWindow ctermbg=None ctermfg=None
-hi InactiveWindow ctermbg=darkgray ctermfg=gray guibg=#282c34
-set winhighlight=Normal:ActiveWindow,NormalNC:InactiveWindow
