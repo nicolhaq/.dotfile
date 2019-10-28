@@ -11,19 +11,18 @@ set smartcase
 set mouse=a
 
 " some formatting options
-set showmatch                      " Show matching brackets.
-set number                         " Show the line numbers on the left side.
+set showmatch                  " Show matching brackets.
+set number                     " Show the line numbers on the left side.
 set formatoptions+=o           " Continue comment marker in new lines.
-set tabstop=8           " Render TABs using this many spaces.
-set shiftwidth=8           " Indentation amount for < and > commands
-set clipboard=unnamedplus " use system clipboard.
-set listchars=tab:\|\ ,trail:·
+set tabstop=8                  " Render TABs using this many spaces.
+set shiftwidth=8               " Indentation amount for < and > commands
+set clipboard=unnamedplus      " use system clipboard.
+set listchars=tab:\|\ ,trail:· " show tab en trailing characters
 set list
 let mapleader = " "
 "match brackets
 hi MatchParen    cterm=reverse ctermfg=NONE ctermbg=NONE
-set colorcolumn=80
-"set cursorline                    " highlight current line
+set colorcolumn=80             " set cursorline
 
 "make vim go a bit faster
 set synmaxcol=128
@@ -77,3 +76,8 @@ set background=dark
 colorscheme base16-material-darker
 let g:rainbow_active = 1
 
+"vim-rooter
+let g:rooter_change_directory_for_non_project_files = 'current'
+let g:rooter_silent_chdir = 1
+let g:rooter_resolve_links = 1
+let g:rooter_patterns = ['Rakefile', '.git/', '.gitignore', 'Cargo.toml']
