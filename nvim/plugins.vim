@@ -19,6 +19,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'mike-hearn/base16-vim-lightline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'TaDaa/vimade'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
