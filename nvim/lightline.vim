@@ -2,7 +2,7 @@ let g:lightline = {
 	\'colorscheme': 'base16_material_darker',
 	\'active': {
 	\  'left': [ [ 'mode', 'paste' ],
-	\     [ 'ctrlpmark',  'git', 'diagnostic','cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ]
+	\     [ 'ctrlpmark',  'gitbranch', 'diagnostic','cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ]
 	\  ],
 	\  'right':[
 	\     [ 'filetype', 'fileencoding', 'lineinfo', 'percent' ],
@@ -13,6 +13,7 @@ let g:lightline = {
 	\   'cocstatus': 'coc#status',
 	\   'currentfunction': 'CocCurrentFunction',
 	\   'blame': 'LightlineGitBlame',
+	\   'gitbranch': 'fugitive#head'
 	\ }
 	\ }
 
