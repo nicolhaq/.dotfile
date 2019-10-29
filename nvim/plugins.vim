@@ -36,5 +36,23 @@ call coc#add_extension(
 	\'coc-marketplace', 'coc-ccls',
 	\'coc-vimlsp')
 
+"vimade
 let g:vimade = {'enablefocusfading': 1}
+
+"hardtime
 let g:hardtime_default_on = 1
+
+"rainbow
+let g:rainbow_active = 1
+
+"vim-rooter
+let g:rooter_change_directory_for_non_project_files = 'current'
+let g:rooter_silent_chdir = 1
+let g:rooter_resolve_links = 1
+let g:rooter_patterns = ['Rakefile', '.git/', '.gitignore', 'Cargo.toml']
+
+"easy align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
