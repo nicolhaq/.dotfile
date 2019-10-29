@@ -20,6 +20,7 @@ Plug 'mike-hearn/base16-vim-lightline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'TaDaa/vimade'
 Plug 'tpope/vim-fugitive'
+Plug 'takac/vim-hardtime'
 
 call plug#end()
 
@@ -36,3 +37,4 @@ call coc#add_extension(
 	\'coc-vimlsp')
 
 let g:vimade = {'enablefocusfading': 1}
+let g:hardtime_default_on = 1
