@@ -1,9 +1,9 @@
 "auto install vimplug
 
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
-  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs 
+	  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs 
     \https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+			  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 "define plugins to load
@@ -33,11 +33,10 @@ call coc#add_extension(
 	\'coc-rls', 'coc-pairs',
 	\'coc-yank', 'coc-highlight',
 	\'coc-git', 'coc-lists',
-	\'coc-marketplace', 'coc-ccls',
-	\'coc-vimlsp')
-
+	\'coc-ccls', 'coc-vimlsp') 
 "vimade
-let g:vimade = {'enablefocusfading': 1}
+let g:vimade = {}
+let g:vimade.enablefocusfading = 1
 
 "hardtime
 let g:hardtime_default_on = 1
