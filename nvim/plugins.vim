@@ -21,6 +21,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'TaDaa/vimade'
 Plug 'tpope/vim-fugitive'
 Plug 'takac/vim-hardtime'
+Plug 'pbondoer/vim-42header'
 
 call plug#end()
 
