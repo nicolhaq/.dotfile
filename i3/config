@@ -299,11 +299,11 @@ exec --no-startup-id conky -c ~/.config/i3/conky
 
 #exec --no-startup-id bash ~/.i3/display.bash
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer 600 'blurlock' ''
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
-exec --no-startup-id ~/.config/i3/i3-alternating-layout/alternating_layouts.py
+exec --no-startup-id autotiling
 exec --no-startup-id discord
 no_focus [class=discord]
 # Color palette used for the terminal ( ~/.Xresources file )
