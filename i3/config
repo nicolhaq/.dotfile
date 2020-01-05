@@ -95,7 +95,7 @@ bindsym $mod+Shift+l move right
 #bindsym $mod+Shift+Left move left
 #bindsym $mod+Shift+Down move down
 #bindsym $mod+Shift+Up move up
-#bindsym $mod+Shift+Right move right
+#bindsym $mod+Shift+Right move right`
 
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
@@ -103,10 +103,9 @@ bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
-bindsym $mod+semicolon split h;exec notify-send 'tile horizontally'
-bindsym $mod+v split v;exec notify-send 'tile vertically'
+bindsym $mod+Ctrl+h split h;exec notify-send 'tile horizontally'
+bindsym $mod+Ctrl+v split v;exec notify-send 'tile vertically'
 bindsym $mod+q split toggle
-
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
@@ -287,15 +286,17 @@ bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+#exec --no-startup-id nitrogen --restore; sleep 1; 
+exec --no-startup-id picom -b
 #exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
+exec --no-startup-id blueman-tray
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id conky -c ~/.config/i3/conky
+#exec --no-startup-id conky -c ~/.config/i3/conky
 
 #exec --no-startup-id bash ~/.i3/display.bash
 # exec --no-startup-id start_conky_green
@@ -304,6 +305,7 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
 exec --no-startup-id autotiling
+exec --no-startup-id bash ~/.dotfile/script/pscircle.bash
 exec --no-startup-id discord
 no_focus [class=discord]
 # Color palette used for the terminal ( ~/.Xresources file )
