@@ -1,4 +1,3 @@
-" indent line-breaks at the same level as code
 set breakindent
 
 " make searching case insensitive
@@ -73,4 +72,5 @@ if (has("termguicolors"))
 endif
 
 set background=dark
+let base16colorspace=256
 colorscheme base16-material-darker

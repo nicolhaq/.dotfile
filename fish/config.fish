@@ -3,6 +3,13 @@ if not functions -q fisher
     curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
     fish -c fisher
 end
+
+# Base16 Shell
+if status --is-interactive
+    set BASE16_SHELL "$HOME/.config/base16-shell/"
+    source "$BASE16_SHELL/profile_helper.fish"
+end
+
 set -x EDITOR nvim
 set -x BROWSER /usr/bin/firefox
 set -x MAIL nhaquet@student.42.fr

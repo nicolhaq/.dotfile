@@ -9,7 +9,7 @@ endif
 "define plugins to load
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-rooter'
 Plug 'junegunn/vim-easy-align'
 Plug 'haya14busa/is.vim'
