@@ -286,7 +286,6 @@ bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-#exec --no-startup-id nitrogen --restore; sleep 1; 
 exec --no-startup-id picom -b
 #exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
@@ -301,9 +300,14 @@ exec --no-startup-id clipit
 #exec --no-startup-id bash ~/.i3/display.bash
 # exec --no-startup-id start_conky_green
 exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer 600 'blurlock' ''
+exec --no-startup-id xss-lock -l -n -- blurlock
+exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer 600 'blurlock' '' \
+				--timer 10 'xrandr --output "eDP" --brightness .1' 'xrandr --output "eDP" --brightness 1' \
+				--timer 900 'systemctl suspend' ''
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
+exec --no-startup-id xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 exec --no-startup-id autotiling
 exec --no-startup-id bash ~/.dotfile/script/pscircle.bash
 exec --no-startup-id discord
