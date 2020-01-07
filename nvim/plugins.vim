@@ -9,19 +9,26 @@ endif
 "define plugins to load
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"utilitys
 Plug 'airblade/vim-rooter'
 Plug 'junegunn/vim-easy-align'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-fugitive'
+Plug 'takac/vim-hardtime'
+Plug 'pbondoer/vim-42header'
+
+"eyecandys
 Plug 'haya14busa/is.vim'
 Plug 'luochen1990/rainbow'
 Plug 'itchyny/lightline.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'mike-hearn/base16-vim-lightline'
-Plug 'scrooloose/nerdcommenter'
 Plug 'TaDaa/vimade'
-Plug 'tpope/vim-fugitive'
-Plug 'takac/vim-hardtime'
-Plug 'pbondoer/vim-42header'
+
+"autocomplte and code navigation
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'liuchengxu/vista.vim'
+Plug 'liuchengxu/vim-clap', {'do': function('clap#helper#build_all')}
 
 call plug#end()
 
@@ -31,13 +38,15 @@ autocmd VimEnter *
   \| endif
 
 call coc#add_extension(
-	\'coc-rls', 'coc-pairs',
+	\'coc-rust-analyzer', 'coc-pairs',
 	\'coc-yank', 'coc-highlight',
 	\'coc-git', 'coc-lists',
 	\'coc-ccls', 'coc-vimlsp') 
+
 "vimade
 let g:vimade = {}
 let g:vimade.enablefocusfading = 1
+let g:vimade.fadelevel = 0.6
 
 "hardtime
 let g:hardtime_default_on = 1
@@ -50,9 +59,3 @@ let g:rooter_change_directory_for_non_project_files = 'current'
 let g:rooter_silent_chdir = 1
 let g:rooter_resolve_links = 1
 let g:rooter_patterns = ['Rakefile', '.git/', '.gitignore', 'Cargo.toml']
-
-"easy align
-" Start interactive EasyAlign in visual mode (e.g. vipga)
-xmap ga <Plug>(EasyAlign)
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)

@@ -1,5 +1,5 @@
-"move line and block
 nnoremap <C-j> :m .+1<CR>==
+"move line and block
 nnoremap <C-k> :m .-2<CR>==
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
@@ -77,4 +77,18 @@ tnoremap <C-t> <C-\><C-n>:call TermToggle(15)<CR>
 " Terminal go back to normal mode
 tnoremap <Esc> <C-\><C-n>
 tnoremap :q! <C-\><C-n>:q!<CR>
+
+"
+"plugins
+"
+"easy align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+"vim-clap maping
+nnoremap <silent> <leader>g  :<C-u>Clap grep<CR>
+nnoremap <silent> <leader>b  :<C-u>Clap buffers<CR>
+nnoremap <silent> <leader>f  :<C-u>Clap files<cr>
 

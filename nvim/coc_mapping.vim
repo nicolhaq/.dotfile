@@ -90,7 +90,7 @@ nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
 " Search workspace symbols
 nnoremap <silent> <leader>s  :<C-u>CocList -I symbols<cr>
 " search files
-nnoremap <silent> <leader>f  :<C-u>CocList files<cr>
+"nnoremap <silent> <leader>f  :<C-u>CocList files<cr>
 " Do default action for next item.
 nnoremap <silent> <leader>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
@@ -100,7 +100,7 @@ nnoremap <silent> <leader>p  :<C-u>CocListResume<CR>
 " open yank list
 nnoremap <silent> <leader>y  :<C-u>CocList yank<CR>
 " open buffer list"
-nnoremap <silent> <leader>b  :<C-u>CocList buffers<CR>
+"nnoremap <silent> <leader>b  :<C-u>CocList buffers<CR>
 " grep in workspace
-nnoremap <silent> <leader>g  :<C-u>CocList grep<CR>
+"nnoremap <silent> <leader>g  :<C-u>CocList grep<CR>
 

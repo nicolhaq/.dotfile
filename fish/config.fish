@@ -10,7 +10,8 @@ if status --is-interactive
     source "$BASE16_SHELL/profile_helper.fish"
 end
 
-set -x EDITOR nvim
-set -x BROWSER /usr/bin/firefox
-set -x MAIL nhaquet@student.42.fr
+set -gx EDITOR nvim
+set -gx BROWSER /usr/bin/firefox
+set -gx PATH /home/grolash/.cargo/bin $PATH
+set -gx MAIL nhaquet@student.42.fr
 #neofetch | lolcat
