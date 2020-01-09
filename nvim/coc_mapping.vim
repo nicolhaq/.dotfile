@@ -99,6 +99,7 @@ nnoremap <silent> <leader>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <leader>p  :<C-u>CocListResume<CR>
 " open yank list
 nnoremap <silent> <leader>y  :<C-u>CocList yank<CR>
+vnoremap <silent> <leader>y  :<C-u>CocList yank<CR>
 " open buffer list"
 "nnoremap <silent> <leader>b  :<C-u>CocList buffers<CR>
 " grep in workspace

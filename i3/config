@@ -303,7 +303,7 @@ exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer 60
 exec --no-startup-id xss-lock -l -n -- blurlock
 exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer 600 'blurlock' '' \
 				--timer 10 'xrandr --output "eDP" --brightness .1' 'xrandr --output "eDP" --brightness 1' \
-				--timer 900 'systemctl suspend' ''
+				--timer 900 'systemctl suspend' 'xrandr --output "eDP" --brightness 1'
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 

@@ -47,6 +47,7 @@ call coc#add_extension(
 let g:vimade = {}
 let g:vimade.enablefocusfading = 1
 let g:vimade.fadelevel = 0.6
+au! FileType vista VimadeBufDisable
 
 "hardtime
 let g:hardtime_default_on = 1
@@ -59,3 +60,4 @@ let g:rooter_change_directory_for_non_project_files = 'current'
 let g:rooter_silent_chdir = 1
 let g:rooter_resolve_links = 1
 let g:rooter_patterns = ['Rakefile', '.git/', '.gitignore', 'Cargo.toml']
+

@@ -6,6 +6,9 @@ set ignorecase
 " ... unless the query has capital letters.
 set smartcase 
 
+"auto refresh buffer
+set autoread
+autocmd FocusGained * :checktime
 "mouse
 set mouse=a
 
@@ -18,7 +21,7 @@ set shiftwidth=8               " Indentation amount for < and > commands
 set clipboard=unnamedplus      " use system clipboard.
 set listchars=tab:\|\ ,trail:· " show tab en trailing characters
 set list
-let mapleader = " "
+let mapleader = "\<Space>"
 "match brackets
 hi MatchParen    cterm=reverse ctermfg=NONE ctermbg=NONE
 set colorcolumn=80             " set cursorline
