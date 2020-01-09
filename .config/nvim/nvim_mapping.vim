@@ -11,6 +11,7 @@ noremap <silent> <Leader>lg :call ToggleLazyGit()<CR>
 noremap <C-t> :call ToggleScratchTerm()<CR>
 tnoremap <C-t> <Esc>:call ToggleScratchTerm()<CR>
 tnoremap <C-t> <C-\><C-n>:call ToggleScratchTerm()<CR>
+let g:floaterm_keymap_toggle = '<f10>'
 "plugins
 
 "easy align
