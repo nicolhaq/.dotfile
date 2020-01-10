@@ -309,7 +309,7 @@ exec_always --no-startup-id fix_xcursor
 
 exec --no-startup-id xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 exec --no-startup-id autotiling
-exec --no-startup-id bash ~/.dotfile/script/pscircle.bash
+exec --no-startup-id bash ~/.config/script/pscircle.bash
 exec --no-startup-id discord
 no_focus [class=discord]
 # Color palette used for the terminal ( ~/.Xresources file )
