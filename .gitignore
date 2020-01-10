@@ -1,6 +1,1 @@
-
-fish/completions/fisher.fish
-fish/functions/fish_prompt.fish
-fish/functions/fisher.fish
-nvim/.netrwhist
-fish/fish
+.dotfile.git
