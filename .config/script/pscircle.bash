@@ -14,10 +14,13 @@ treeradius=400,200,150
 treecenter=-950:-525
 #diagram color
 bgcolor=212121
-linkcolormin=89ddff
+linkcolormin=82AAFF
 linkcolormax=f07178
 dotcolormin=c3e88d
 dotcolormax=ff5370
+toplistsfontcolor=FFCB6B
+toplistspidfontcolor=C3E88D
+treefontcolor=b2ccd6
 #listcolor
 
 
@@ -25,10 +28,10 @@ while true;
 do 	pscircle --output=$output \
 		--background-color=$bgcolor \
 		--toplists-font-face=$font \
-		--toplists-font-color=fabd2f \
-		--toplists-pid-font-color=b8bb26 \
+		--toplists-font-color=$toplistsfontcolor \
+		--toplists-pid-font-color=$toplistspidfontcolor \
 		--tree-font-face=$font \
-		--tree-font-color=fbf1c7 \
+		--tree-font-color=$treefontcolor \
 		--link-convexity=0.6 \
 		--link-color-min=$linkcolormin \
 		--link-color-max=$linkcolormax \
@@ -61,10 +64,10 @@ do 	pscircle --output=$output \
 	pscircle --output=$output2 \
 		--background-color=$bgcolor \
 		--toplists-font-face=$font \
-		--toplists-font-color=fabd2f \
-		--toplists-pid-font-color=b8bb26 \
+		--toplists-font-color=$toplistsfontcolor \
+		--toplists-pid-font-color=$toplistspidfontcolor \
 		--tree-font-face=$font \
-		--tree-font-color=fbf1c7 \
+		--tree-font-color=$treefontcolor \
 		--link-convexity=0.6 \
 		--link-color-min=$linkcolormin \
 		--link-color-max=$linkcolormax \
@@ -97,10 +100,10 @@ do 	pscircle --output=$output \
 	pscircle --output=$output3 \
 		--background-color=$bgcolor \
 		--toplists-font-face=$font \
-		--toplists-font-color=fabd2f \
-		--toplists-pid-font-color=b8bb26 \
+		--toplists-font-color=$toplistsfontcolor \
+		--toplists-pid-font-color=$toplistspidfontcolor \
 		--tree-font-face=$font \
-		--tree-font-color=fbf1c7 \
+		--tree-font-color=$treefontcolor \
 		--link-convexity=0.6 \
 		--link-color-min=$linkcolormin \
 		--link-color-max=$linkcolormax\

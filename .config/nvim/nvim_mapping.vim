@@ -5,13 +5,13 @@ vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " Open lazygit
-noremap <silent> <Leader>lg :call ToggleLazyGit()<CR>
+noremap <silent> <F2> :call ToggleLazyGit()<CR>
 
 "" Toggle terminal on/off (neovim)
-noremap <C-t> :call ToggleScratchTerm()<CR>
-tnoremap <C-t> <Esc>:call ToggleScratchTerm()<CR>
-tnoremap <C-t> <C-\><C-n>:call ToggleScratchTerm()<CR>
-let g:floaterm_keymap_toggle = '<f10>'
+let g:floaterm_keymap_toggle = '<C-t><C-t>'
+let g:floaterm_keymap_new = '<C-t><C-n>'
+let g:floaterm_keymap_next = '<C-t><C-l>'
+let g:floaterm_keymap_prev = '<C-t><C-h>'
 "plugins
 
 "easy align
