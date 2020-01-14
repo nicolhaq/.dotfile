@@ -1,4 +1,4 @@
-# i3 config file (v4)
+#i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
@@ -299,11 +299,12 @@ exec --no-startup-id clipit
 
 #exec --no-startup-id bash ~/.i3/display.bash
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer 600 'blurlock' ''
+#exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer 600 'blurlock' ''
 exec --no-startup-id xss-lock -l -n -- blurlock
 exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer 600 'blurlock' '' \
-				--timer 10 'xrandr --output "eDP" --brightness .1' 'xrandr --output "eDP" --brightness 1' \
-				--timer 900 'systemctl suspend' 'xrandr --output "eDP" --brightness 1'
+				--timer 10 'xset dpms force off' 'xset dpms force on' \
+				--timer 9 'systemctl suspend' 'xset dmps force on'
+#--timer 10 'xrandr --output "eDP" --brightness .1' 'xrandr --output "eDP" --brightness 1' \
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
@@ -358,47 +359,48 @@ set $base0C #89DDFF
 set $base0D #82AAFF
 set $base0E #C792EA
 set $base0F #FF5370
+exec --no-startup-id ~/.config/polybar/init.sh
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
-bar {
-	i3bar_command i3bar
-	status_command i3status
-	position bottom
+#bar {
+	#i3bar_command i3bar
+	#status_command i3status
+	#position bottom
 
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
+### please set your primary output first. Example: 'xrandr --output eDP1 --primary'
+##	tray_output primary
+##	tray_output eDP1
 
-	bindsym button4 nop
-	bindsym button5 nop
-#   font xft:URWGothic-Book 11
-	strip_workspace_numbers yes
+	#bindsym button4 nop
+	#bindsym button5 nop
+##   font xft:URWGothic-Book 11
+	#strip_workspace_numbers yes
 
-    colors {
-#        background #222D31
-#        statusline #F9FAF9
-#        separator  #454947
-#
-#                      border  backgr. text
-#        focused_workspace  #F9FAF9 #16a085 #292F34
-#        active_workspace   #595B5B #353836 #FDF6E3
-#        inactive_workspace #595B5B #222D31 #EEE8D5
-#        binding_mode       #16a085 #2C2C2C #F9FAF9
-#        urgent_workspace   #16a085 #FDF6E3 #E5201D
-	background $base00
-        separator  $base01
-        statusline $base04
+    #colors {
+##        background #222D31
+##        statusline #F9FAF9
+##        separator  #454947
+##
+##                      border  backgr. text
+##        focused_workspace  #F9FAF9 #16a085 #292F34
+##        active_workspace   #595B5B #353836 #FDF6E3
+##        inactive_workspace #595B5B #222D31 #EEE8D5
+##        binding_mode       #16a085 #2C2C2C #F9FAF9
+##        urgent_workspace   #16a085 #FDF6E3 #E5201D
+	#background $base00
+        #separator  $base01
+        #statusline $base04
 
-        # State             Border  BG      Text
-        focused_workspace   $base05 $base0D $base00
-        active_workspace    $base05 $base03 $base00
-        inactive_workspace  $base03 $base01 $base05
-        urgent_workspace    $base08 $base08 $base00
-	binding_mode $base00 $base0A $base00
-    }
-}
+        ## State             Border  BG      Text
+        #focused_workspace   $base05 $base0D $base00
+        #active_workspace    $base05 $base03 $base00
+        #inactive_workspace  $base03 $base01 $base05
+        #urgent_workspace    $base08 $base08 $base00
+	#binding_mode $base00 $base0A $base00
+    #}
+#}
 
 # hide/unhide i3status bar
-bindsym $mod+m bar mode toggle
+bindsym $mod+m exec --no-startup-id ~/.config/polybar/init.sh
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
