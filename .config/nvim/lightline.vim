@@ -2,7 +2,7 @@ let g:lightline = {
 	\'colorscheme': 'base16_material_darker',
 	\'active': {
 	\  'left': [ [ 'mode', 'paste' ],
-	\     [ 'gitbranch', 'diagnostic','cocstatus', 'readonly', 'filename', 'modified' ]
+	\     [ 'gitbranch', 'diagnostic','cocstatus', 'readonly', 'filename', 'modified', ]
 	\  ],
 	\  'right':[
 	\     [ 'filetype', 'fileencoding', 'lineinfo', 'percent' ]

@@ -18,14 +18,14 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
-background-alt = #444
+background = #212121
+background-alt = #4a4a4a
 ;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+foreground = #eeffff
+foreground-alt = #5a5a5a
+primary = #ffcb6b
+secondary = #f07178
+alert = #ff5370
 
 [bar/top]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -57,7 +57,7 @@ font-0 = Fira Code Retina:pixelsize=12;1
 font-1 = Font Awesome 5 Free Regular:size=15;1
 font-2 = Font Awesome 5 Free Solid:size=15;1
 font-3 = Font Awesome 5 Brands Regular:size=15;1
-modules-center = updates-arch-aur filesystem memory cpu temperature
+modules-center = updates-arch-aur filesystem memory cpu system-cpu-frequency temperature
 
 tray-position = none
 tray-padding = 2
@@ -321,25 +321,35 @@ label-song-ellipsis = true
 
 [module/xbacklight]
 type = internal/xbacklight
+;XRandR output to get get values from
+; Default: the monitor defined for the running bar
+output = eDP
 
+; Create scroll handlers used to set the backlight value
+; Default: true
+enable-scroll = false
+; Available tags:
+;   <label> (default)
+;   <ramp>
+;   <bar>
 format = <label> <bar>
-label = BL
 
+; Available tokens:
+;   %percentage% (default)
+label = %percentage%%
+
+; Only applies if <ramp> is used
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
+
+; Only applies if <bar> is used
 bar-width = 10
 bar-indicator = |
-bar-indicator-foreground = #fff
-bar-indicator-font = 2
 bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = #9f78e1
 bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
-
-[module/backlight-acpi]
-inherit = module/xbacklight
-type = internal/backlight
-card = intel_backlight
 
 [module/backlight]
 type = internal/backlight
@@ -374,7 +384,7 @@ bar-empty = ─
 type = internal/cpu
 interval = 0.5
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-underline = #ff5370
 label = %percentage:2%%
 ; Available tags:
 ;   <label> (default)
@@ -407,7 +417,7 @@ type = internal/memory
 ; Seconds to sleep between updates
 ; Default: 1
 interval = 3
-format-underline = #4bffdc
+format-underline = #89ddff
 ; Available tags:
 ;   <label> (default)
 ;   <bar-used>
@@ -443,10 +453,10 @@ label = %gb_used%/%gb_free%
 ; Only applies if <bar-used> is used
 bar-used-indicator =
 bar-used-width = 50
-bar-used-foreground-0 = #55aa55
-bar-used-foreground-1 = #557755
-bar-used-foreground-2 = #f5a70a
-bar-used-foreground-3 = #ff5555
+bar-used-foreground-0 = #c3e88b
+bar-used-foreground-1 = #e9e98b
+bar-used-foreground-2 = #ffcb6b
+bar-used-foreground-3 = #ff5370
 bar-used-fill = ▐
 bar-used-empty = ▐
 bar-used-empty-foreground = #444444
@@ -530,15 +540,15 @@ format-packetloss = <animation-packetloss> <label-connected>
 
 ; Default: %ifname% %local_ip%
 label-connected = %essid% %downspeed:9%
-label-connected-foreground = #eefafafa
+label-connected-foreground = #eeffff
 
 ; Default: (none)
 label-disconnected = not connected
-label-disconnected-foreground = #66ffffff
+label-disconnected-foreground = #89ddff
 
 ; Default: (none)
 ;label-packetloss = %essid%
-;label-packetloss-foreground = #eefafafa
+;label-packetloss-foreground = #eeffff
 
 ; Only applies if <ramp-signal> is used
 ramp-signal-0 = 😱
@@ -550,7 +560,7 @@ ramp-signal-5 = 😈
 
 ; Only applies if <animation-packetloss> is used
 animation-packetloss-0 = ⚠
-animation-packetloss-0-foreground = #ffa64c
+animation-packetloss-0-foreground = #ffcb6b
 animation-packetloss-1 = 📶
 animation-packetloss-1-foreground = #000000
 ; Framerate in milliseconds
@@ -595,7 +605,7 @@ time-alt = %H:%M:%S
 ; Available tags:
 ;   <label> (default)
 format =  <label>
-format-foreground = #fff
+format-foreground = #eeffff
 
 ; Available tokens:
 ;   %date%
@@ -606,7 +616,19 @@ label-font = 3
 
 [module/pulseaudio]
 type = internal/pulseaudio
-
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = false
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 5
+; Available tags:
+;   <label-volume> (default)
+;   <ramp-volume>
+;   <bar-volume>
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
@@ -615,13 +637,13 @@ label-muted = 
 label-muted-foreground = #666
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
+bar-volume-foreground-0 = #c3e88b
+bar-volume-foreground-1 = #c3e88b
+bar-volume-foreground-2 = #c3e88b
+bar-volume-foreground-3 = #c3e88b
+bar-volume-foreground-4 = #c3e88b
+bar-volume-foreground-5 = #ffcb6b
+bar-volume-foreground-6 = #ff5370
 bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
@@ -630,7 +652,29 @@ bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
-click-right = exec pavucontrol &
+; Available tags:
+;   <label-muted> (default)
+;   <ramp-volume>
+;   <bar-volume>
+;format-muted = <label-muted>
+
+; Available tokens:
+;   %percentage% (default)
+;   %decibels% (unreleased)
+;label-volume = %percentage%%
+
+; Available tokens:
+;   %percentage% (default)
+;   %decibels% (unreleased)
+
+; Only applies if <ramp-volume> is used
+ramp-volume-0 = 🔈
+ramp-volume-1 = 🔉
+ramp-volume-2 = 🔊
+
+; Right and Middle click (unreleased)
+click-right = pavucontrol &
+; click-middle = 
 ;[module/alsa]
 ;type = internal/alsa
 
@@ -771,7 +815,7 @@ thermal-zone = 0
 ; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
 ; to find path to desired file
 ; Default reverts to thermal zone setting
-hwmon-path = /sys/class/hwmon/hwmon2/temp1_input
+hwmon-path = /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input
 
 ; Base temperature for where to start the ramp (in degrees celsius)
 ; Default: 0
@@ -805,7 +849,7 @@ label = %temperature-c%
 ;   %temperature-c%   (default, temperature in °C)
 ;   %temperature-f%   (temperature in °F)
 label-warn = %temperature-c%
-label-warn-foreground = #f00
+label-warn-foreground = #ff5370
 
 ; Requires the <ramp> tag
 ; The icon selection will range from `base-temperature` to `warn-temperature`,
@@ -849,6 +893,11 @@ menu-2-1-exec = menu-open-0
 type = custom/script
 exec = ~/.config/polybar/updates-arch-aur.sh
 interval = 600
+
+[module/system-cpu-frequency]
+type = custom/script
+exec = ~/.config/polybar/system-cpu-frequency.sh
+interval = 10
 
 [settings]
 screenchange-reload = true

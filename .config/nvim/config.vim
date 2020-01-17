@@ -5,7 +5,7 @@ set ignorecase
 
 " ... unless the query has capital letters.
 set smartcase 
-
+set inccommand=split
 "auto refresh buffer
 set autoread
 autocmd FocusGained * :checktime

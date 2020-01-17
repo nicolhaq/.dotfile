@@ -21,6 +21,7 @@ Plug 'voldikss/vim-floaterm'
 
 "eyecandys
 Plug 'haya14busa/is.vim'
+Plug 'haya14busa/vim-asterisk'
 Plug 'luochen1990/rainbow'
 Plug 'itchyny/lightline.vim'
 Plug 'chriskempson/base16-vim'
@@ -30,7 +31,7 @@ Plug 'TaDaa/vimade'
 "autocomplte and code navigation
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/vista.vim'
-Plug 'liuchengxu/vim-clap', {'do': function('clap#helper#build_all')}
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 
 call plug#end()
 
@@ -66,3 +67,10 @@ let g:rooter_patterns = ['Rakefile', '.git/', '.gitignore', 'Cargo.toml']
 "floaterm
 let g:floaterm_position = 'center'
 let g:floaterm_background = '303030'
+
+"better asteris + is.vimk
+map *  <Plug>(asterisk-z*)<Plug>(is-nohl-1)
+map g* <Plug>(asterisk-gz*)<Plug>(is-nohl-1)
+map #  <Plug>(asterisk-z#)<Plug>(is-nohl-1)
+map g# <Plug>(asterisk-gz#)<Plug>(is-nohl-1)
+let g:asterisk#keeppos = 1
