@@ -11,7 +11,7 @@ output3=/tmp/pscircle3.png
 font=Inconsolata
 timer=1
 treeradius=400,200,150
-treecenter=-950:-525
+treecenter=-950:-500
 #diagram color
 bgcolor=212121
 linkcolormin=82AAFF

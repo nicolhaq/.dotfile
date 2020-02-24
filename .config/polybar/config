@@ -109,8 +109,8 @@ font-1 = Font Awesome 5 Free Regular:size=17;3
 font-2 = Font Awesome 5 Free Solid:size=17;3
 font-3 = Font Awesome 5 Brands Regular:size=17;3
 modules-left = bspwm i3
-modules-center = pulseaudio backlight
-modules-right = wlan eth battery date
+modules-center = pulseaudio
+modules-right = battery date
 
 tray-position = right
 tray-padding = 2
@@ -238,7 +238,7 @@ format-unmounted = <label-unmounted>
 ;   %free%
 ;   %used%
 ; Default: %mountpoint% %percentage_free%%
-label-mounted = %mountpoint%: %free% of %total%
+label-mounted = %mountpoint%: %used% of %total%
 
 ; Available tokens:
 ;   %mountpoint%

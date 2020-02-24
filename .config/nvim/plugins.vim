@@ -53,7 +53,7 @@ let g:vimade.fadelevel = 0.6
 au! FileType vista VimadeBufDisable
 
 "hardtime
-let g:hardtime_default_on = 1
+"let g:hardtime_default_on = 1
 
 "rainbow
 let g:rainbow_active = 1
@@ -74,3 +74,5 @@ map g* <Plug>(asterisk-gz*)<Plug>(is-nohl-1)
 map #  <Plug>(asterisk-z#)<Plug>(is-nohl-1)
 map g# <Plug>(asterisk-gz#)<Plug>(is-nohl-1)
 let g:asterisk#keeppos = 1
+"vimclap
+autocmd FileType clap_input inoremap <silent> <buffer> <Esc> <Esc>:call clap#handler#exit()<CR>
