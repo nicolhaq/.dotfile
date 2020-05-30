@@ -32,6 +32,7 @@ Plug 'TaDaa/vimade'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/vista.vim'
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+Plug 'mhinz/vim-crates'
 
 call plug#end()
 
@@ -43,8 +44,7 @@ autocmd VimEnter *
 call coc#add_extension(
 	\'coc-rust-analyzer', 'coc-pairs',
 	\'coc-yank', 'coc-highlight',
-	\'coc-git', 'coc-lists',
-	\'coc-ccls', 'coc-vimlsp') 
+	\'coc-git', 'coc-lists', 'coc-vimlsp') 
 
 "vimade
 let g:vimade = {}
@@ -76,3 +76,7 @@ map g# <Plug>(asterisk-gz#)<Plug>(is-nohl-1)
 let g:asterisk#keeppos = 1
 "vimclap
 autocmd FileType clap_input inoremap <silent> <buffer> <Esc> <Esc>:call clap#handler#exit()<CR>
+
+if has('nvim')
+  autocmd BufRead Cargo.toml call crates#toggle()
+endif

@@ -12,6 +12,9 @@ autocmd FocusGained * :checktime
 "mouse
 set mouse=a
 
+"font
+set guifont=*
+
 " some formatting options
 set showmatch                  " Show matching brackets.
 set number                     " Show the line numbers on the left side.
