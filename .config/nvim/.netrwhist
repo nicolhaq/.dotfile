@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
-let g:netrw_dirhist_6='/home/grolash/.config/nvim'
-let g:netrw_dirhist_5='/home/grolash/Documents/rust-analyzer/.vscode'
-let g:netrw_dirhist_4='/home/grolash/Documents/War/gent_test'
-let g:netrw_dirhist_3='/home/grolash/.config/script'
-let g:netrw_dirhist_2='/home/grolash/.config/script/.config-backup'
-let g:netrw_dirhist_1='/home/grolash/.config/script'
