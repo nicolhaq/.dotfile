@@ -62,12 +62,13 @@ let g:rainbow_active = 1
 let g:rooter_change_directory_for_non_project_files = 'current'
 let g:rooter_silent_chdir = 1
 let g:rooter_resolve_links = 1
-let g:rooter_patterns = ['Rakefile', '.git/', '.gitignore', 'Cargo.toml']
+let g:rooter_patterns = ['Makefile', '.git/', '.gitignore', 'Cargo.toml']
 
 "floaterm
 let g:floaterm_position = 'center'
 let g:floaterm_background = '303030'
-
+let g:floaterm_height = 0.8
+let g:floaterm_width = 0.8
 "better asteris + is.vimk
 map *  <Plug>(asterisk-z*)<Plug>(is-nohl-1)
 map g* <Plug>(asterisk-gz*)<Plug>(is-nohl-1)

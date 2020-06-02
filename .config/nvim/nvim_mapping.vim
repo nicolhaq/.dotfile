@@ -4,8 +4,9 @@ nnoremap <C-k> :m .-2<CR>==
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
-" Open lazygit
-noremap <silent> <F2> :call ToggleLazyGit()<CR>
+" Open.terminal app
+noremap <silent> <F2> :FloatermNew --name=lazygit lazygit <CR>
+noremap <silent> <f3> :FloatermNew --name=ranger ranger <CR>
 
 "" Toggle terminal on/off (neovim)
 let g:floaterm_keymap_toggle = '<C-t><C-t>'
@@ -16,6 +17,7 @@ let g:floaterm_keymap_prev = '<C-t><C-h>'
 
 "easy align
 " Start interactive EasyAlign in visual mode (e.g. vipga)
+"
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
