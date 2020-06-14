@@ -34,7 +34,7 @@ bindsym $mod+Return exec kitty -d "`xcwd`"
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+d exec --no-startup-id rofi -show drun -icon-theme "Papirus" -show-icons
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -293,8 +293,9 @@ exec --no-startup-id blueman-tray
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
-# exec --no-startup-id blueman-applet
-# exec_always --no-startup-id sbxkb
+exec --no-startup-id nitrogen --restore &
+exec --no-startup-id blueman-applet
+#exec_always --no-startup-id sbxkb
 #exec --no-startup-id conky -c ~/.config/i3/conky
 
 #exec --no-startup-id bash ~/.i3/display.bash
@@ -310,7 +311,6 @@ exec_always --no-startup-id fix_xcursor
 
 exec --no-startup-id xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 exec --no-startup-id autotiling
-exec --no-startup-id bash ~/.config/script/pscircle.bash
 exec --no-startup-id discord
 no_focus [class=discord]
 # Color palette used for the terminal ( ~/.Xresources file )

@@ -85,7 +85,7 @@ bottom = true
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 6.0
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -109,7 +109,7 @@ font-1 = Font Awesome 5 Free Regular:size=17;3
 font-2 = Font Awesome 5 Free Solid:size=17;3
 font-3 = Font Awesome 5 Brands Regular:size=17;3
 modules-left = bspwm i3
-modules-center = pulseaudio
+modules-center = pulseaudio pulseaudio-microphone
 modules-right = battery date
 
 tray-position = right
@@ -222,6 +222,7 @@ spacing = 4
 ;   <bar-free>
 ;   <bar-used>
 ;   <ramp-capacity>
+label-mounted-underline = #c3e88b
 format-mounted = <label-mounted>
 
 ; Available tags:
@@ -238,8 +239,7 @@ format-unmounted = <label-unmounted>
 ;   %free%
 ;   %used%
 ; Default: %mountpoint% %percentage_free%%
-label-mounted = %mountpoint%: %used% of %total%
-
+label-mounted = %mountpoint%: %used% of %total%
 ; Available tokens:
 ;   %mountpoint%
 ; Default: %mountpoint% is not mounted
@@ -361,7 +361,7 @@ card = amdgpu_bl0
 ;   <label> (default)
 ;   <ramp>
 ;   <bar>
-format = <label> <bar>
+format = <ramp> <bar>
 
 ; Available tokens:
 ;   %percentage% (default)
@@ -374,7 +374,7 @@ ramp-4 = 🌒
 ramp-3 = 🌑
 
 ; Only applies if <bar> is used
-bar-width = 10
+bar-width = 25
 bar-indicator = |
 bar-fill = ─
 bar-empty = ─
@@ -391,7 +391,7 @@ label = %percentage:2%%
 ;   <bar-load>
 ;   <ramp-load>
 ;   <ramp-coreload>
-format = <label> <ramp-coreload>
+format = <label> <ramp-coreload>
 
 ; Available tokens:
 ;   %percentage% (default) - total cpu load averaged over all cores
@@ -428,7 +428,7 @@ format-underline = #89ddff
 ;   <bar-swap-free>
 ;   <ramp-swap-used>
 ;   <ramp-swap-free>
-format = <label> <bar-used>
+format = <label> <bar-used>
 
 ; Available tokens:
 ;   %percentage_used% (default)
@@ -630,7 +630,7 @@ interval = 5
 ;   <ramp-volume>
 ;   <bar-volume>
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted = 
@@ -761,7 +761,7 @@ label-charging =  %percentage%%
 ;   %percentage_raw%
 ;   %time%
 ;   %consumption% (shows current discharge rate in watts)
-label-discharging = %percentage%%
+label-discharging = %percentage%% %time%
 
 ; Available tokens:
 ;   %percentage% (default) - is set to 100 if full-at is reached
@@ -815,7 +815,7 @@ thermal-zone = 0
 ; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
 ; to find path to desired file
 ; Default reverts to thermal zone setting
-hwmon-path = /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input
+hwmon-path = ${env:HWMON_PATH}
 
 ; Base temperature for where to start the ramp (in degrees celsius)
 ; Default: 0
@@ -850,7 +850,7 @@ label = %temperature-c%
 ;   %temperature-f%   (temperature in °F)
 label-warn = %temperature-c%
 label-warn-foreground = #ff5370
-
+format-underline = #ffcb6b
 ; Requires the <ramp> tag
 ; The icon selection will range from `base-temperature` to `warn-temperature`,
 ; temperatures above `warn-temperature` will use the last icon
@@ -898,6 +898,13 @@ interval = 600
 type = custom/script
 exec = ~/.config/polybar/system-cpu-frequency.sh
 interval = 10
+label-underline = #bc99ed
+
+[module/pulseaudio-microphone]
+type = custom/script
+exec = ~/.config/polybar/pulseaudio-microphone.sh
+tail = true
+click-left = ~/.config/polybar/pulseaudio-microphone.sh --toggle &
 
 [settings]
 screenchange-reload = true
@@ -908,7 +915,7 @@ screenchange-reload = true
 ;pseudo-transparency = false
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 0
+margin-bottom = 0
 
 ; vim:ft=dosini
