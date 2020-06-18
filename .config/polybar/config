@@ -819,7 +819,7 @@ hwmon-path = ${env:HWMON_PATH}
 
 ; Base temperature for where to start the ramp (in degrees celsius)
 ; Default: 0
-base-temperature = 20
+base-temperature = 40
 
 ; Threshold temperature to display warning label (in degrees celsius)
 ; Default: 80
@@ -858,7 +858,6 @@ format-underline = #ffcb6b
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
-ramp-foreground = #55
 
 [module/powermenu]
 type = custom/menu
