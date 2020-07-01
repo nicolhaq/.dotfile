@@ -6,12 +6,12 @@ set ignorecase
 " ... unless the query has capital letters.
 set smartcase 
 set inccommand=split
+
 "auto refresh buffer
 set autoread
 autocmd FocusGained * :checktime
 "mouse
 set mouse=a
-
 "font
 set guifont=*
 
@@ -19,16 +19,17 @@ set guifont=*
 set showmatch                  " Show matching brackets.
 set number                     " Show the line numbers on the left side.
 set formatoptions+=o           " Continue comment marker in new lines.
-set tabstop=8                  " Render TABs using this many spaces.
-set shiftwidth=8               " Indentation amount for < and > commands
+set tabstop=4                  " Render TABs using this many spaces.
+set shiftwidth=4               " Indentation amount for < and > commands
 set clipboard=unnamedplus      " use system clipboard.
 set listchars=tab:\|\ ,trail:· " show tab en trailing characters
 set list
 let mapleader = "\<Space>"
 "match brackets
 hi MatchParen    cterm=reverse ctermfg=NONE ctermbg=NONE
-set colorcolumn=80             " set cursorline
-
+set colorcolumn=80
+set tw=80
+set formatoptions+=t
 "make vim go a bit faster
 set synmaxcol=128
 syntax sync minlines=256

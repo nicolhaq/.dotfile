@@ -27,12 +27,14 @@ Plug 'itchyny/lightline.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'mike-hearn/base16-vim-lightline'
 Plug 'TaDaa/vimade'
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 
 "autocomplte and code navigation
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/vista.vim'
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 Plug 'mhinz/vim-crates'
+Plug 'tikhomirov/vim-glsl'
 
 call plug#end()
 

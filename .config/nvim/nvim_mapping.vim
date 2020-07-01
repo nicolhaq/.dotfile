@@ -4,6 +4,12 @@ nnoremap <C-k> :m .-2<CR>==
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
+"better jk navigation
+nnoremap j gjzz
+nnoremap k gkzz
+vnoremap j gjzz
+vnoremap k gkzz
+
 " Open.terminal app
 noremap <silent> <F2> :FloatermNew --name=lazygit lazygit <CR>
 noremap <silent> <f3> :FloatermNew --name=ranger ranger <CR>
@@ -23,6 +29,6 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 "vim-clap maping
-nnoremap <silent> <leader>g  :<C-u>Clap grep<CR>
+nnoremap <silent> <leader>g  :<C-u>Clap grep2<CR>
 nnoremap <silent> <leader>b  :<C-u>Clap buffers<CR>
 nnoremap <silent> <leader>f  :<C-u>Clap files<cr>
