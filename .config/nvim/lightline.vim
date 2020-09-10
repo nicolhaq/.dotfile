@@ -2,14 +2,21 @@ let g:lightline = {
 	\'colorscheme': 'base16_material_darker',
 	\'active': {
 	\  'left': [ [ 'mode', 'paste' ],
-	\     [ 'gitbranch', 'diagnostic','cocstatus', 'readonly', 'filename', 'modified', ]
+	\     ['diagnostic','cocstatus', 'readonly', 'filename', 'gitbranch']
 	\  ],
 	\  'right':[
-	\     [ 'filetype', 'fileencoding', 'lineinfo', 'percent' ]
+	\     ['modified', 'filetype', 'fileencoding', 'lineinfo', 'percent' ]
 	\  ]
 	\ },
 	\ 'component_function': {
 	\   'cocstatus': 'coc#status',
-	\   'gitbranch': 'fugitive#head'
+	\   'gitbranch': 'LightlineGitStatus'
 	\ }
 	\ }
+
+function! LightlineGitStatus() abort
+	let status = get(g:, 'coc_git_status', '')
+	return status
+endfunction
+
+

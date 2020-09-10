@@ -1,5 +1,4 @@
 {
-  "git.enableGutters": true,
   "codeLens.enable": true,
   "codeLens.subseparator": "| ",
   "diagnostic.checkCurrentLine": true,

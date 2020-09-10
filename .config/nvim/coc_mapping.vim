@@ -130,4 +130,5 @@ vnoremap <silent> <leader>y  :<C-u>CocList yank<CR>
 "nnoremap <silent> <leader>b  :<C-u>CocList buffers<CR>
 " grep in workspace
 "nnoremap <silent> <leader>g  :<C-u>CocList grep<CR>
-
+"rename current file
+nnoremap <silent> <leader>r  :<C-u>CocCommand workspace.renameCurrentFile<CR>

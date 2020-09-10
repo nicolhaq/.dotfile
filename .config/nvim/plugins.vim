@@ -46,7 +46,7 @@ autocmd VimEnter *
 call coc#add_extension(
 	\'coc-rust-analyzer', 'coc-pairs',
 	\'coc-yank', 'coc-highlight',
-	\'coc-git', 'coc-lists', 'coc-vimlsp') 
+	\'coc-git', 'coc-vimlsp') 
 
 "vimade
 let g:vimade = {}

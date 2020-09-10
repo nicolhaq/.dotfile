@@ -297,6 +297,7 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id nitrogen --restore &
 exec --no-startup-id blueman-applet
+exec --no-startup-id udiskie --tray
 #exec_always --no-startup-id sbxkb
 #exec --no-startup-id conky -c ~/.config/i3/conky
 
