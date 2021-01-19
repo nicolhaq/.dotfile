@@ -5,18 +5,24 @@ let g:lightline = {
 	\     ['diagnostic','cocstatus', 'readonly', 'filename', 'gitbranch']
 	\  ],
 	\  'right':[
-	\     ['modified', 'filetype', 'fileencoding', 'lineinfo', 'percent' ]
+	\     ['filetype', 'fileencoding', 'lineinfo', 'percent' ]
 	\  ]
 	\ },
 	\ 'component_function': {
 	\   'cocstatus': 'coc#status',
-	\   'gitbranch': 'LightlineGitStatus'
+	\   'gitbranch': 'LightlineGitStatus',
+	\   'filename' : 'LightlineFileName'
 	\ }
 	\ }
 
-function! LightlineGitStatus() abort
-	let status = get(g:, 'coc_git_status', '')
-	return status
+function! LightlineFileName()
+	let filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
+	let modified = &modified ? ' +' : ''
+	return filename . modified
 endfunction
 
-
+function! LightlineGitStatus()
+	let branch = get(g:, 'coc_git_status', '')
+	let status = get(b:, 'coc_git_status', '')
+	return branch . status
+endfunction

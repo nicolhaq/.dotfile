@@ -9,11 +9,10 @@ set inccommand=split
 
 "auto refresh buffer
 set autoread
-autocmd FocusGained * :checktime
 "mouse
 set mouse=a
 "font
-set guifont=*
+set guifont=Fira\ Code\ Nerd\ Font\ retina:16
 
 " some formatting options
 set showmatch                  " Show matching brackets.
@@ -31,17 +30,19 @@ set colorcolumn=80
 set tw=80
 set formatoptions+=t
 "make vim go a bit faster
-set synmaxcol=128
 syntax sync minlines=256
 set lazyredraw
 set re=1
+
+"undoflie
+set undofile
 
 "Dynamic line number
 "set number relativenumber
 augroup numbertoggle
 	autocmd!
-	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-	autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+	autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
+	autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
 augroup END
 
 augroup lineHighlight
@@ -56,7 +57,8 @@ set splitright
 
 " if hidden is not set, TextEdit might fail.
 set hidden
-
+"hide staus bar mode
+set noshowmode
 " Some servers have issues with backup files, see #649
 set nobackup
 set nowritebackup

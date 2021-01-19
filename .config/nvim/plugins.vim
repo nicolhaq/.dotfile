@@ -14,10 +14,11 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'airblade/vim-rooter'
 Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdcommenter'
-Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-fugitive'
 Plug 'takac/vim-hardtime'
-Plug 'pbondoer/vim-42header'
+"Plug 'pbondoer/vim-42header'
 Plug 'voldikss/vim-floaterm'
+Plug 'kdheepak/lazygit.nvim'
 
 "eyecandys
 Plug 'haya14busa/is.vim'
@@ -27,14 +28,13 @@ Plug 'itchyny/lightline.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'mike-hearn/base16-vim-lightline'
 Plug 'TaDaa/vimade'
-Plug 'jackguo380/vim-lsp-cxx-highlight'
+"Plug 'jackguo380/vim-lsp-cxx-highlight'
 
 "autocomplte and code navigation
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'liuchengxu/vista.vim'
+"Plug 'liuchengxu/vista.vim'
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
-Plug 'mhinz/vim-crates'
-Plug 'tikhomirov/vim-glsl'
+"Plug 'tikhomirov/vim-glsl'
 
 call plug#end()
 
@@ -79,7 +79,3 @@ map g# <Plug>(asterisk-gz#)<Plug>(is-nohl-1)
 let g:asterisk#keeppos = 1
 "vimclap
 autocmd FileType clap_input inoremap <silent> <buffer> <Esc> <Esc>:call clap#handler#exit()<CR>
-
-if has('nvim')
-  autocmd BufRead Cargo.toml call crates#toggle()
-endif

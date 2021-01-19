@@ -25,7 +25,7 @@ nnoremap ) )zz
 
 
 " Open.terminal app
-noremap <silent> <F2> :FloatermNew --name=lazygit lazygit <CR>
+noremap <silent> <F2> :LazyGit <CR>
 noremap <silent> <f3> :FloatermNew --name=ranger ranger <CR>
 
 "" Toggle terminal on/off (neovim)

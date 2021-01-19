@@ -155,8 +155,11 @@ set $ws8 8:8:steam
 #                         *** Workspace specific settings ***                     #
 ##=================================================##
 # Assign Workspaces:
-assign [class="firefox"] $ws3
+assign [class="neovide"] $ws2
+assign [class="Navigator"] $ws3
 assign [class="discord"] $ws4
+assign [class="Slack"] $ws4
+assign [class="Spotify"] $ws6
 assign [class="Terraria"] $ws7
 assign [class="Minecraft"] $ws7
 assign [class="dontstarve_steam"] $ws7
