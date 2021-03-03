@@ -5,7 +5,7 @@ set ignorecase
 
 " ... unless the query has capital letters.
 set smartcase 
-set inccommand=split
+set inccommand=nosplit
 
 "auto refresh buffer
 set autoread

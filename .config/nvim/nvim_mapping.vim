@@ -5,24 +5,10 @@ vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
 "bette navigation
-nnoremap j gjzz
-nnoremap k gkzz
-vnoremap j gjzz
-vnoremap k gkzz
-
-nnoremap { {zz
-nnoremap } }zz
-
-nnoremap n nzz
-nnoremap N Nzz
-
-
-nnoremap [[ [[zz
-nnoremap ]] ]]zz
-
-nnoremap ( (zz
-nnoremap ) )zz
-
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 
 " Open.terminal app
 noremap <silent> <F2> :LazyGit <CR>

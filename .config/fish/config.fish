@@ -16,3 +16,4 @@ set -gx PATH /home/grolash/.cargo/bin $PATH
 set -gx MAIL nhaquet@student.42.fr
 #neofetch | lolcat
 fish_ssh_agent
+starship init fish | source

@@ -5,6 +5,10 @@ SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_grep:rg
+SETUVAR _fisher_danhper_2F_fish_2D_ssh_2D_agent_files:/home/grolash/\x2econfig/fish/functions/__ssh_agent_is_started\x2efish\x1e/home/grolash/\x2econfig/fish/functions/__ssh_agent_start\x2efish\x1e/home/grolash/\x2econfig/fish/conf\x2ed/fish\x2dssh\x2dagent\x2efish
+SETUVAR _fisher_evanlucas_2F_fish_2D_kubectl_2D_completions_files:/home/grolash/\x2econfig/fish/completions/kubectl\x2efish
+SETUVAR _fisher_ivakyb_2F_fish__ssh__agent_files:/home/grolash/\x2econfig/fish/functions/fish_ssh_agent\x2efish
+SETUVAR _fisher_plugins:isacikgoz/sashimi\x1eivakyb/fish_ssh_agent\x1edanhper/fish\x2dssh\x2dagent\x1eevanlucas/fish\x2dkubectl\x2dcompletions
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:005fd7

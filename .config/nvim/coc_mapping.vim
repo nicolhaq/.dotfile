@@ -119,15 +119,15 @@ command! -nargs=0 OR   :call	CocAction('runCommand', 'editor.action.organizeImpo
 
 " Using CocList
 " Show all diagnostics
-nnoremap <silent> <leader>d  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <leader>d  :<C-u>Clap coc_diagnostics<cr>
 " Manage extensions
-nnoremap <silent> <leader>e  :<C-u>CocList extensions<cr>
+nnoremap <silent> <leader>e  :<C-u>Clap coc_extensions<cr>
 " Show commands
-nnoremap <silent> <leader>c  :<C-u>CocList commands<cr>
+nnoremap <silent> <leader>c  :<C-u>Clap coc_commands<cr>
 " Find symbol of current document
-nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
+nnoremap <silent> <leader>o  :<C-u>Clap coc_outline<cr>
 " Search workspace symbols
-nnoremap <silent> <leader>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <leader>s  :<C-u>Clap coc_symbols<cr>
 " search files
 "nnoremap <silent> <leader>f  :<C-u>CocList files<cr>
 " Do default action for next item.
