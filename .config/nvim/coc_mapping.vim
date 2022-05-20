@@ -119,26 +119,26 @@ command! -nargs=0 OR   :call	CocAction('runCommand', 'editor.action.organizeImpo
 
 " Using CocList
 " Show all diagnostics
-nnoremap <silent> <leader>d  :<C-u>Clap coc_diagnostics<cr>
+nnoremap <silent><nowait> <leader>d  :<C-u>Clap coc_diagnostics<cr>
 " Manage extensions
-nnoremap <silent> <leader>e  :<C-u>Clap coc_extensions<cr>
+nnoremap <silent><nowait> <leader>e  :<C-u>Clap coc_extensions<cr>
 " Show commands
-nnoremap <silent> <leader>c  :<C-u>Clap coc_commands<cr>
+nnoremap <silent><nowait> <leader>c  :<C-u>Clap coc_commands<cr>
 " Find symbol of current document
-nnoremap <silent> <leader>o  :<C-u>Clap coc_outline<cr>
+nnoremap <silent><nowait> <leader>o  :<C-u>Clap coc_outline<cr>
 " Search workspace symbols
-nnoremap <silent> <leader>s  :<C-u>Clap coc_symbols<cr>
+nnoremap <silent><nowait> <leader>s  :<C-u>Clap coc_symbols<cr>
 " search files
 "nnoremap <silent> <leader>f  :<C-u>CocList files<cr>
 " Do default action for next item.
-nnoremap <silent> <leader>j  :<C-u>CocNext<CR>
+nnoremap <silent><nowait> <leader>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent> <leader>k  :<C-u>CocPrev<CR>
+nnoremap <silent><nowait> <leader>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
-nnoremap <silent> <leader>p  :<C-u>CocListResume<CR>
+nnoremap <silent><nowait> <leader>p  :<C-u>CocListResume<CR>
 " open yank list
-nnoremap <silent> <leader>y  :<C-u>CocList yank<CR>
-vnoremap <silent> <leader>y  :<C-u>CocList yank<CR>
+nnoremap <silent><nowait> <leader>y  :<C-u>CocList yank<CR>
+vnoremap <silent><nowait> <leader>y  :<C-u>CocList yank<CR>
 " open buffer list"
 "nnoremap <silent> <leader>b  :<C-u>CocList buffers<CR>
 " grep in workspace

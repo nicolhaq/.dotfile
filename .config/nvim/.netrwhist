@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/grolash/Documents/w6d/wildcard_deserializer/w6d_deserializer_lib'
+let g:netrw_dirhist_2='/home/grolash/Documents/w6d/wildcard_deserializer/yaml_deserializer/src'
+let g:netrw_dirhist_1='/home/grolash/Documents/w6d/check-supported-dotnet/xml_test_repo'
+let g:netrw_dirhist_0='/home/grolash/Documents/w6d/check-supported-dotnet/src/utils'
+let g:netrw_dirhist_9='/home/grolash/Documents/w6d/check-supported-dotnet/src/local-kafka-rslib/local-kafka-lib/src'
+let g:netrw_dirhist_8='/home/grolash/Documents/w6d/check-supported-dotnet/src/local-kafka-rslib/local-kafka-lib'
+let g:netrw_dirhist_7='/home/grolash/Documents/w6d/check-supported-dotnet/src/local-kafka-rslib'
+let g:netrw_dirhist_6='/home/grolash/Documents/w6d/check-supported-dotnet'
+let g:netrw_dirhist_5='/home/grolash/Documents/w6d/check-supported-dotnet/local-kafka-rslib'
+let g:netrw_dirhist_4='/home/grolash/Documents/w6d/check-supported-dotnet/browser_view'

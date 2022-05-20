@@ -14,28 +14,24 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'airblade/vim-rooter'
 Plug 'junegunn/vim-easy-align'
 Plug 'b3nj5m1n/kommentary'
-"Plug 'scrooloose/nerdcommenter'
-"Plug 'tpope/vim-fugitive'
 Plug 'takac/vim-hardtime'
 "Plug 'pbondoer/vim-42header'
 Plug 'voldikss/vim-floaterm'
 Plug 'kdheepak/lazygit.nvim'
 Plug 'mhinz/vim-startify'
-" Plug 'mhinz/vim-crates'
 Plug 'meain/vim-package-info', { 'do': 'npm install' }
+Plug 'qianyan/vim-crates'
 "eyecandys
 Plug 'luochen1990/rainbow'
 Plug 'itchyny/lightline.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'mike-hearn/base16-vim-lightline'
 Plug 'TaDaa/vimade'
-"Plug 'jackguo380/vim-lsp-cxx-highlight'
-
 "autocomplte and code navigation
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/vista.vim'
-Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
-Plug 'liuchengxu/coc-clap'
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
+Plug 'vn-ki/coc-clap'
 "Plug 'tikhomirov/vim-glsl'
 
 call plug#end()
@@ -44,10 +40,6 @@ autocmd VimEnter *
   \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \|   PlugInstall --sync | q
   \| endif
-
-if has('nvim')
-  autocmd BufRead Cargo.toml call crates#toggle()
-endif
 
 call coc#add_extension(
 	\'coc-rust-analyzer', 'coc-pairs',
@@ -64,8 +56,6 @@ au! FileType vista VimadeBufDisable
 "let g:hardtime_default_on = 1
 "startify
 let g:startify_session_persistence = 1
-
-
 "rainbow
 let g:rainbow_active = 1
 
@@ -81,4 +71,5 @@ let g:floaterm_background = '303030'
 let g:floaterm_height = 0.8
 let g:floaterm_width = 0.8
 "vimclap
+let g:clap_layout = { 'relative': 'editor' }
 autocmd FileType clap_input inoremap <silent> <buffer> <Esc> <Esc>:call clap#handler#exit()<CR>

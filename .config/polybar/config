@@ -51,13 +51,13 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Fira Code Retina:pixelsize=12;1
+font-0 = FiraCode-Retina:pixelsize=12;1
 ;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 ;font-2 = Wuncon Siji:pixelsize=10;1
 font-1 = Font-logos logos:size=15;1
-font-2 = Font Awesome 5 Free Regular:size=15;1
-font-3 = Font Awesome 5 Free Solid:size=15;1
-font-4 = Font Awesome 5 Brands Regular:size=15;1
+font-2 = Font Awesome 6 Free Regular:size=15;1
+font-3 = Font Awesome 6 Free Solid:size=15;1
+font-4 = Font Awesome 6 Brands Regular:size=15;1
 modules-center = updates-arch-aur filesystem memory cpu system-cpu-frequency temperature
 
 tray-position = none
@@ -103,12 +103,13 @@ padding-right = 2
 module-margin-left = 2
 module-margin-right = 2
 
-font-0 = Fira Code Retina:pixelsize=12;1
+font-0 = FiraCode-Retina:pixelsize=12;1
+font-1 = FiraCode-Bold:pixelsize=17;1
 ;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 ;font-2 = Wuncon Siji:pixelsize=10;1
-font-1 = Font Awesome 5 Free Regular:size=17;3
-font-2 = Font Awesome 5 Free Solid:size=17;3
-font-3 = Font Awesome 5 Brands Regular:size=17;3
+font-2 = Font Awesome 6 Free Regular:size=17;3
+font-3 = Font Awesome 6 Free Solid:size=17;3
+font-4 = Font Awesome 6 Brands Regular:size=17;3
 modules-left = bspwm i3
 modules-center = pulseaudio pulseaudio-microphone
 modules-right = battery date
@@ -275,6 +276,13 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-default = 
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
@@ -283,23 +291,23 @@ label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
+label-focused = %index%:%icon%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
-label-unfocused-padding = 2
+label-unfocused = %index%:%icon%
+label-unfocused-padding = 1
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = %index% %icon%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = %index% %icon%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
@@ -613,7 +621,7 @@ format-foreground = #eeffff
 ;   %time%
 ; Default: %date%
 label = %date% %time%
-label-font = 3
+label-font = 2
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -818,11 +826,12 @@ thermal-zone = 0
 ; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
 ; to find path to desired file
 ; Default reverts to thermal zone setting
-hwmon-path = ${env:HWMON_PATH}
+; hwmon-path = ${env:HWMON_PATH}
+hwmon-path = /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon5/temp1_input
 
 ; Base temperature for where to start the ramp (in degrees celsius)
 ; Default: 0
-base-temperature = 40
+base-temperature = 0
 
 ; Threshold temperature to display warning label (in degrees celsius)
 ; Default: 80
@@ -858,9 +867,10 @@ format-underline = #ffcb6b
 ; The icon selection will range from `base-temperature` to `warn-temperature`,
 ; temperatures above `warn-temperature` will use the last icon
 ; and temperatures below `base-temperature` will use `ramp-0`
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
 
 [module/powermenu]
 type = custom/menu

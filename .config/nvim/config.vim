@@ -12,8 +12,7 @@ set autoread
 "mouse
 set mouse=a
 "font
-set guifont=Fira\ Code\ Nerd\ Font\ retina:16
-
+set guifont=FiraCode\ Nerd\ Font:h16
 " some formatting options
 set showmatch                  " Show matching brackets.
 set number                     " Show the line numbers on the left side.
@@ -55,6 +54,9 @@ augroup END
 set splitbelow
 set splitright
 
+" Set internal encoding of vim, not needed on neovim, since coc.nvim using some
+" unicode characters in the file autoload/float.vim
+set encoding=utf-8
 " if hidden is not set, TextEdit might fail.
 set hidden
 "hide staus bar mode

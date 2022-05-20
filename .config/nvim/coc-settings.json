@@ -4,5 +4,6 @@
   "diagnostic.checkCurrentLine": true,
   "clangd.semanticHighlighting": true,
   "rust-analyzer.checkOnSave.command": "clippy",
-  "rust-analyzer.inlayHints.typeHintsSeparator":"❯ "
+  "rust-analyzer.inlayHints.typeHintsSeparator":"❯ ",
+  "rust-analyzer.diagnostics.disabled": ["unresolved-macro-call"]
 }
