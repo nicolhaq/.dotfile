@@ -26,11 +26,11 @@ Plug 'luochen1990/rainbow'
 Plug 'itchyny/lightline.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'mike-hearn/base16-vim-lightline'
-Plug 'TaDaa/vimade'
+" Plug 'TaDaa/vimade'
 "autocomplte and code navigation
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/vista.vim'
-Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary'}
 Plug 'vn-ki/coc-clap'
 "Plug 'tikhomirov/vim-glsl'
 
@@ -47,10 +47,10 @@ call coc#add_extension(
 	\'coc-git', 'coc-vimlsp') 
 
 "vimade
-let g:vimade = {}
-let g:vimade.enablefocusfading = 1
-let g:vimade.fadelevel = 0.6
-au! FileType vista VimadeBufDisable
+" let g:vimade = {}
+" let g:vimade.enablefocusfading = 1
+" let g:vimade.fadelevel = 0.6
+" au! FileType vista VimadeBufDisable
 
 "hardtime
 "let g:hardtime_default_on = 1
@@ -72,4 +72,4 @@ let g:floaterm_height = 0.8
 let g:floaterm_width = 0.8
 "vimclap
 let g:clap_layout = { 'relative': 'editor' }
-autocmd FileType clap_input inoremap <silent> <buffer> <Esc> <Esc>:call clap#handler#exit()<CR>
+" autocmd FileType clap_input inoremap <silent> <buffer> <Esc> <Esc>:call clap#handler#exit()<CR>

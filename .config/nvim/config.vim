@@ -12,7 +12,7 @@ set autoread
 "mouse
 set mouse=a
 "font
-set guifont=FiraCode\ Nerd\ Font:h16
+set guifont=Fira\ Code\ Retina:h11
 " some formatting options
 set showmatch                  " Show matching brackets.
 set number                     " Show the line numbers on the left side.

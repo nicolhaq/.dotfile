@@ -11,6 +11,7 @@ if status --is-interactive
 end
 
 set -gx EDITOR nvim
+set -gx RUST_LOG DEBUG
 set -gx BROWSER /usr/bin/firefox
 set -gx PATH /home/grolash/.cargo/bin $PATH
 set -gx MAIL nhaquet@student.42.fr
