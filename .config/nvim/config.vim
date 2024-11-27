@@ -13,6 +13,9 @@ set autoread
 set mouse=a
 "font
 set guifont=Fira\ Code\ Retina:h11
+if exists("g:neovide")
+	let g:neovide_scale_factor = 1
+endif
 " some formatting options
 set showmatch                  " Show matching brackets.
 set number                     " Show the line numbers on the left side.
